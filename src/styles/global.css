@@ -424,9 +424,24 @@ p {
 .podcast-card {
   display: grid;
   gap: 1.4rem;
+  align-items: center;
   padding: 1rem;
   border: 3px solid var(--ink);
   background: var(--yellow);
+}
+
+.spotify-embed {
+  display: grid;
+  align-items: center;
+  min-width: 0;
+}
+
+.spotify-embed iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-radius: 8px;
 }
 
 .section-header {

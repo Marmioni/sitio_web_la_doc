@@ -72,21 +72,21 @@ const socialLinks = [
     <!-- FRASE LITERARIA: puedes repetir, borrar o cambiar estos fragmentos entre secciones. -->
     <FragmentQuote text="You're doing the right thing." tone="teal" />
 
-    <!-- PODCAST: cambia arte, titulo, descripcion y enlaces de escucha/episodios. -->
+    <!-- PODCAST: cambia la imagen del arte y el src del iframe de Spotify. -->
     <section class="podcast-section">
       <div class="podcast-card">
         <PlaceholderBox label="PODCAST ARTWORK PLACEHOLDER" shape="square" accent="red" />
-        <div>
-          <p class="eyebrow">Audio archive</p>
-          <h2>PODCAST</h2>
-          <p>
-            Placeholder text for conversations about literature, failed certainty, comedy under
-            pressure, and the tender embarrassment of being alive in public.
-          </p>
-          <div class="button-row">
-            <a class="button button-primary" href="#">Listen</a>
-            <a class="button button-secondary" href="#">Episodes</a>
-          </div>
+        <div class="spotify-embed">
+          <iframe
+            data-testid="embed-iframe"
+            src="https://open.spotify.com/embed/show/1NoYNkEMYiEyq7HAw5H8yv?utm_source=generator&si=676e0382a7ef4028"
+            width="100%"
+            height="152"
+            allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="HiStORiAs-InCóMoDaS en Spotify"
+          ></iframe>
         </div>
       </div>
     </section>
