@@ -1,0 +1,27 @@
+---
+// NAVEGACION PRINCIPAL: cambia aqui los textos y rutas del menu superior.
+const links = [
+  { href: "/", label: "Inicio" },
+  { href: "/biografia", label: "Biografía" },
+  { href: "/bibliografia", label: "Bibliografía" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contacto", label: "Contacto" },
+];
+---
+
+<header class="site-header">
+  <!-- MARCA: reemplaza AUTHOR NAME por el nombre real del autor. -->
+  <a class="brand" href="/" aria-label="AUTHOR NAME home">
+    <span>AUTHOR</span>
+    <span>NAME</span>
+  </a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+  <label class="nav-button" for="nav-toggle">
+    <span></span>
+    <span></span>
+  </label>
+  <!-- MENU: estos enlaces se generan desde la lista links de arriba. -->
+  <nav class="site-nav" aria-label="Primary navigation">
+    {links.map((link) => <a href={link.href}>{link.label}</a>)}
+  </nav>
+</header>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AUTHOR NAME OpenGraph placeholder</title>
+  <desc id="desc">Editorial placeholder graphic for social sharing.</desc>
+  <rect width="1200" height="630" fill="#F5F1EA"/>
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#111111" stroke-width="8"/>
+  <rect x="80" y="370" width="420" height="130" fill="#FF3B30"/>
+  <rect x="520" y="370" width="250" height="130" fill="#00D1B2"/>
+  <rect x="790" y="370" width="330" height="130" fill="#FFCC00"/>
+  <text x="78" y="168" fill="#111111" font-family="Arial, sans-serif" font-size="92" font-weight="900">AUTHOR NAME</text>
+  <text x="84" y="265" fill="#111111" font-family="Arial, sans-serif" font-size="42" font-weight="700">Contemporary literary fiction</text>
+</svg>

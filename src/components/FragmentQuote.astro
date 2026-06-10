@@ -1,0 +1,12 @@
+---
+interface Props {
+  text: string;
+  tone?: "red" | "teal" | "yellow" | "ink";
+}
+
+const { text, tone = "ink" } = Astro.props;
+---
+
+<aside class={`fragment fragment-${tone}`} aria-label="Literary fragment">
+  <p>{text}</p>
+</aside>

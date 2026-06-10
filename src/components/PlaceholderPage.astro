@@ -1,0 +1,41 @@
+---
+import FragmentQuote from "./FragmentQuote.astro";
+
+interface Props {
+  title: string;
+  eyebrow: string;
+  quote: string;
+}
+
+const { title, eyebrow, quote } = Astro.props;
+---
+
+<main class="placeholder-page">
+  <!-- PAGINA TEMPORAL: cambia eyebrow, title y quote desde cada archivo en src/pages/. -->
+  <section class="page-hero">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <!-- TEXTO PRINCIPAL: reemplaza este parrafo cuando la pagina tenga contenido definitivo. -->
+    <p>
+      Placeholder text for a future editorial page. This space is ready for biography,
+      bibliography notes, dispatches, press materials, and other artifacts from the author's
+      public record.
+    </p>
+    <strong>Content coming soon.</strong>
+  </section>
+  <!-- FRASE LITERARIA: el texto se recibe desde la propiedad quote de cada pagina. -->
+  <FragmentQuote text={quote} tone="red" />
+  <!-- TARJETAS TEMPORALES: reemplaza estos articulos por contenido real cuando la pagina este lista. -->
+  <section class="coming-soon-grid" aria-label="Preview placeholders">
+    <article>
+      <span>01</span>
+      <h2>Draft space</h2>
+      <p>Replace this with polished copy when the page is ready.</p>
+    </article>
+    <article>
+      <span>02</span>
+      <h2>Editorial note</h2>
+      <p>The unfinished state is intentional, clear, and visually complete.</p>
+    </article>
+  </section>
+</main>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  label: string;
+  shape?: "portrait" | "cover" | "wide" | "square";
+  accent?: "red" | "teal" | "yellow";
+}
+
+const { label, shape = "wide", accent = "red" } = Astro.props;
+---
+
+<div class={`placeholder-box placeholder-${shape} accent-${accent}`}>
+  <span>{label}</span>
+</div>
