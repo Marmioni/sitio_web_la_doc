@@ -209,7 +209,7 @@ h3 {
 h1 {
   max-width: 9ch;
   margin-bottom: 1.2rem;
-  font-size: clamp(4rem, 18vw, 10rem);
+  font-size: clamp(3.2rem, 14vw, 8rem);
   font-weight: 950;
   line-height: 0.78;
   text-transform: uppercase;
