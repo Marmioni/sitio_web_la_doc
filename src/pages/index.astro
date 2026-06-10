@@ -11,9 +11,14 @@ const media = await getCollection("media");
 const books = works.filter((work) => work.data.kind === "Book");
 const stories = works.filter((work) => work.data.kind === "Short Story");
 
-// Edita esta lista para cambiar los nombres de las redes sociales del bloque inicial.
-// Los enlaces reales se cambian en el href="#" dentro de la seccion de redes.
-const socialLinks = ["Instagram", "TikTok", "YouTube", "Substack", "Amazon Author Page"];
+// REDES SOCIALES: cambia aqui las URL reales de cada perfil.
+const socialLinks = [
+  { label: "Instagram", url: "https://instagram.com/yourname" },
+  { label: "TikTok", url: "https://tiktok.com/@yourname" },
+  { label: "YouTube", url: "https://youtube.com/@yourname" },
+  { label: "Substack", url: "https://yourname.substack.com" },
+  { label: "Amazon Author Page", url: "https://amazon.com/author/yourname" },
+];
 ---
 
 <BaseLayout title="MAR MIONI | Contemporary Literary Author">
@@ -40,7 +45,7 @@ const socialLinks = ["Instagram", "TikTok", "YouTube", "Substack", "Amazon Autho
 
     <!-- REDES SOCIALES: reemplaza href="#" por las URL reales de Instagram, TikTok, YouTube, Substack y Amazon. -->
     <section class="social-strip" aria-label="Social links">
-      {socialLinks.map((link) => <a href="#" aria-label={`${link} placeholder`}>{link}</a>)}
+      {socialLinks.map((link) => <a href={link.url} aria-label={link.label}>{link.label}</a>)}
     </section>
 
     <!-- FRASE LITERARIA: cambia el texto del atributo text para modificar este fragmento editorial. -->
