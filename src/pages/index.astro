@@ -126,13 +126,13 @@ const socialLinks = [
         <div>
           <h3 class="column-title">Books</h3>
           <div class="work-list">
-            {books.map((work) => <WorkCard title={work.data.title} meta={work.data.year} description={work.data.description} />)}
+            {books.map((work) => <WorkCard title={work.data.title} meta={work.data.year} description={work.data.description} url={work.data.url} />)}
           </div>
         </div>
         <div>
           <h3 class="column-title">Short Stories</h3>
           <div class="work-list">
-            {stories.map((work) => <WorkCard title={work.data.title} meta={work.data.year} description={work.data.description} />)}
+            {stories.map((work) => <WorkCard title={work.data.title} meta={work.data.year} description={work.data.description} url={work.data.url} />)}
           </div>
         </div>
       </div>

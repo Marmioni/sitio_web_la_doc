@@ -7,6 +7,7 @@ const books = defineCollection({
     kind: z.enum(["Book", "Short Story"]),
     year: z.string(),
     description: z.string(),
+    url: z.string().url().optional(),
   }),
 });
 
