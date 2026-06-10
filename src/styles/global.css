@@ -440,6 +440,7 @@ p {
   display: block;
   width: 100%;
   max-width: 100%;
+  min-height: min(352px, 90vw);
   border: 0;
   border-radius: 8px;
 }
