@@ -63,8 +63,8 @@ const socialLinks = [
           self-deception, public performance, private panic, and jokes that arrive too late to help.
         </p>
         <div class="button-row">
-          <a class="button button-primary" href="#">Buy on Amazon</a>
-          <a class="button button-secondary" href="#">Read Sample</a>
+          <a class="button button-primary" href="#">Comprar en Amazon</a>
+          <a class="button button-secondary" href="#">Leer Fragmento</a>
         </div>
       </div>
     </section>
@@ -94,9 +94,9 @@ const socialLinks = [
     <!-- ENTREVISTAS Y MEDIOS: las tarjetas vienen de src/content/media/*.json. -->
     <section class="media-section">
       <SectionHeader
-        eyebrow="Press / media"
-        title="Interviews & Media"
-        description="Placeholder cards for interviews, cultural notes, readings, and suspiciously articulate appearances."
+        eyebrow="Media"
+        title="Entrevistas y medios"
+        description="Descubre lo que hay detrás de mi como escritora"
       />
       <div class="media-grid">
         {
@@ -118,9 +118,9 @@ const socialLinks = [
     <!-- OBRAS SELECCIONADAS: los libros y cuentos vienen de src/content/books/*.json. -->
     <section class="works-section">
       <SectionHeader
-        eyebrow="Selected works"
-        title="Books / Short Stories"
-        description="A living bibliography of long disasters and compact detonations."
+        eyebrow="Obras Seleccionadas"
+        title="Historias"
+        description="¿Existen los finales felices?"
       />
       <div class="works-columns">
         <div>
@@ -139,25 +139,7 @@ const socialLinks = [
     </section>
 
     <!-- FRASE LITERARIA: este fragmento aparece antes del formulario de newsletter. -->
-    <FragmentQuote text="Bad decisions make good stories." tone="ink" />
+    <FragmentQuote text="Abre los ojos, vuela conmigo." tone="ink" />
 
-    <!-- NEWSLETTER: cambia titular, descripcion, placeholder del email y texto del boton. No hay backend conectado todavia. -->
-    <section class="newsletter-section">
-      <div>
-        <p class="eyebrow">Newsletter</p>
-        <h2>Join the archive.</h2>
-        <p>
-          Placeholder description for dispatches, fragments, release notes, readings, and future
-          evidence that someone was paying attention.
-        </p>
-      </div>
-      <form class="newsletter-form">
-        <label for="email">Email address</label>
-        <div>
-          <input id="email" type="email" placeholder="you@example.com" />
-          <button class="button button-primary" type="button">Subscribe</button>
-        </div>
-      </form>
-    </section>
   </main>
 </BaseLayout>
