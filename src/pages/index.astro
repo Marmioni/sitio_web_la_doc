@@ -20,7 +20,7 @@ const socialLinks = [
 ];
 ---
 
-<BaseLayout title="MAR MIONI | Contemporary Literary Author">
+<BaseLayout title="MAR MIONI | Creadora independiente">
   <main>
     <!-- HERO: cambia aqui el nombre del autor, la frase principal y el texto del retrato. -->
     <section class="hero-section">
@@ -30,7 +30,7 @@ const socialLinks = [
         <p class="hero-tagline">
          Escritora .<br />
           Storyteller.<br />
-          Bienvenidos a mi aquelarre.
+          ¡Bienvenidos a mi aquelarre!
         </p>
       </div>
       <div class="hero-art reveal delay-1">
@@ -56,11 +56,10 @@ const socialLinks = [
         <PlaceholderBox label="BOOK COVER PLACEHOLDER" shape="cover" accent="yellow" />
       </div>
       <div class="feature-copy">
-        <p class="eyebrow">Featured book</p>
-        <h2>NEW BOOK</h2>
+        <p class="eyebrow">NUEVO LIBRO</p>
+        <h2>LA CORTE DE LAS DIABLAS</h2>
         <p>
-          Placeholder description for the newest work: an elegant literary accident involving
-          self-deception, public performance, private panic, and jokes that arrive too late to help.
+         Este libro no es solo una colección de cuentos. Para mí representa catarsis y exhumación. Bienvenido a mi corte, y cuidado, porque hoy todas las diablas tenemos hambre.
         </p>
         <div class="button-row">
           <a class="button button-primary" href="#">Comprar en Amazon</a>
@@ -70,7 +69,7 @@ const socialLinks = [
     </section>
 
     <!-- FRASE LITERARIA: puedes repetir, borrar o cambiar estos fragmentos entre secciones. -->
-    <FragmentQuote text="You're doing the right thing." tone="teal" />
+    <FragmentQuote text="Escribo porque de no hacerlo, el ruido adentro sería insoportable" tone="teal" />
 
     <!-- PODCAST: cambia la imagen del arte y el src del iframe de Spotify. -->
     <section class="podcast-section">
@@ -100,7 +99,7 @@ const socialLinks = [
       <SectionHeader
         eyebrow="Media"
         title="Entrevistas y medios"
-        description="Descubre lo que hay detrás de mi como escritora"
+        description="Descubre lo que hay detrás de mí como escritora"
       />
       <div class="media-grid">
         {
@@ -117,7 +116,7 @@ const socialLinks = [
     </section>
 
     <!-- FRASE LITERARIA: cambia este texto si quieres otro fragmento del universo del autor. -->
-    <FragmentQuote text="Escribo porque de no hacerlo, el ruido adentro sería insoportable" tone="yellow" />
+    <FragmentQuote text="A través de las letras nos convertimos en Diablas" tone="yellow" />
 
     <!-- OBRAS SELECCIONADAS: los libros y cuentos vienen de src/content/books/*.json. -->
     <section class="works-section">
@@ -128,13 +127,13 @@ const socialLinks = [
       />
       <div class="works-columns">
         <div>
-          <h3 class="column-title">Books</h3>
+          <h3 class="column-title">Libros</h3>
           <div class="work-list">
             {books.map((work) => <WorkCard title={work.data.title} meta={work.data.year} description={work.data.description} url={work.data.url} />)}
           </div>
         </div>
         <div>
-          <h3 class="column-title">Short Stories</h3>
+          <h3 class="column-title">Historias cortas</h3>
           <div class="work-list">
             {stories.map((work) => <WorkCard title={work.data.title} meta={work.data.year} description={work.data.description} url={work.data.url} />)}
           </div>
