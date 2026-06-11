@@ -281,6 +281,20 @@ p {
   box-shadow: 0.45rem 0.45rem 0 var(--ink);
 }
 
+.author-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 3px solid var(--ink);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.author-photo:hover {
+  transform: translate(-0.2rem, -0.2rem);
+  box-shadow: 0.45rem 0.45rem 0 var(--ink);
+}
+
 .placeholder-portrait {
   min-height: clamp(28rem, 75vw, 42rem);
   aspect-ratio: 4 / 5;
