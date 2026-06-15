@@ -1,15 +1,14 @@
 ---
+import { socialLinks } from "../data/socialLinks";
+
 // NAVEGACION DEL FOOTER: cambia aqui los textos y rutas del menu inferior.
 const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/biografia", label: "Biografía" },
-  { href: "/bibliografia", label: "Bibliografía" },
+  { href: "/libros", label: "Libros" },
   { href: "/blog", label: "Blog" },
   { href: "/contacto", label: "Contacto" },
 ];
-
-// REDES DEL FOOTER: cambia los nombres aqui y las URL en href="#" mas abajo.
-const socialLinks = ["Instagram", "YouTube", "Substack", "Amazon"];
 ---
 
 <footer class="site-footer">
@@ -23,7 +22,7 @@ const socialLinks = ["Instagram", "YouTube", "Substack", "Amazon"];
       {navLinks.map((link) => <a href={link.href}>{link.label}</a>)}
     </nav>
     <div class="footer-socials">
-      {socialLinks.map((link) => <a href="#" aria-label={`${link} placeholder`}>{link}</a>)}
+      {socialLinks.map((link) => <a href={link.url} aria-label={link.label}>{link.label}</a>)}
     </div>
   </div>
   <!-- COPYRIGHT: actualiza el año, nombre y texto legal cuando corresponda. -->
