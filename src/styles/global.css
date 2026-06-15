@@ -690,6 +690,79 @@ p {
   margin-top: 1rem;
 }
 
+.book-fragment-page {
+  overflow: hidden;
+}
+
+.fragment-hero,
+.book-fragment,
+.fragment-actions {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+.fragment-hero {
+  padding-block: clamp(3rem, 9vw, 7rem);
+}
+
+.fragment-hero h1 {
+  max-width: 11ch;
+}
+
+.fragment-hero p {
+  max-width: 48rem;
+}
+
+.book-fragment {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.fragment-marker {
+  color: var(--red);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 12vw, 7rem);
+  font-weight: 950;
+  line-height: 0.8;
+}
+
+.fragment-copy {
+  padding: clamp(1.2rem, 4vw, 2.5rem);
+  border: 3px solid var(--ink);
+  background: rgba(245, 241, 234, 0.86);
+}
+
+.fragment-copy p {
+  max-width: 70ch;
+  margin-bottom: 1.25rem;
+  color: var(--ink);
+  font-size: clamp(1.08rem, 2.2vw, 1.4rem);
+  line-height: 1.7;
+}
+
+.fragment-copy p:first-child::first-letter {
+  float: left;
+  margin: 0.08em 0.12em 0 0;
+  color: var(--red);
+  font-family: var(--font-display);
+  font-size: 4.8em;
+  font-weight: 950;
+  line-height: 0.72;
+}
+
+.fragment-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.fragment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
 .site-footer {
   width: min(100%, var(--max));
   margin: 0 auto;
@@ -835,6 +908,10 @@ p {
 
   .newsletter-form div {
     grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .book-fragment {
+    grid-template-columns: 10rem minmax(0, 1fr);
   }
 }
 

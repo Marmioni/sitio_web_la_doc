@@ -1,0 +1,55 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import FragmentQuote from "@components/FragmentQuote.astro";
+---
+
+<BaseLayout
+  title="Fragmento | La Corte de las Diablas"
+  description="Lee un fragmento de La Corte de las Diablas, libro de Mar Mioni."
+>
+  <main class="book-fragment-page">
+    <section class="fragment-hero">
+      <p class="eyebrow">Fragmento del libro</p>
+      <h1>La Corte de las Diablas</h1>
+      <p>
+        Un adelanto de la corte: cuerpo, encierro, rabia y una voz que despierta con fuego
+        detrás de los ojos.
+      </p>
+    </section>
+
+    <FragmentQuote text="Mujeres de pasiones ingobernables." tone="yellow" />
+
+    <article class="book-fragment" aria-label="Fragmento de La Corte de las Diablas">
+      <div class="fragment-marker">01</div>
+      <div class="fragment-copy">
+        <p>
+          Desnuda dentro de una jaula de cristal me muevo inquieta mientras toco las paredes
+          intentando respirar. Todo está empañado por mi propio vaho, apenas puedo ver afuera,
+          el espacio es diminuto, me falta el aire, me ahogo.
+        </p>
+        <p>
+          —¡Auxilio!— grito, pero mi grito se queda atorado en el cristal que golpeo con fuerza
+          mientras entro en pánico y comienzo a llorar.
+        </p>
+        <p>—AYUDA—pero mi voz se disuelve...</p>
+        <p>
+          Despierto sobresaltada, jalo aire mientras me seco las lágrimas, otra vez ese sueño.
+          Me levanto y tomo la medicina psiquiátrica que claramente ya no hace el mismo efecto,
+          última vez, pienso, y luego tiro el frasco al excusado. Miro mis ojeras, doy asco.
+        </p>
+        <p>
+          Me dirijo a mi trabajo de mierda en el transporte de mierda rodeada de gente de mierda
+          por las calles de mierda de una ciudad de mierda; si pones suficiente atención en mi
+          mirada, verás que cargo odio de otras vidas, mis pupilas son de fuego, pero nadie pone
+          atención, van perdidos en sus propios pensamientos, nadie se entera de que una bomba
+          nuclear viaja con ellos.
+        </p>
+      </div>
+    </article>
+
+    <section class="fragment-actions" aria-label="Acciones del fragmento">
+      <a class="button button-primary" href="/">Volver al inicio</a>
+      <a class="button button-secondary" href="/libros">Ver libros</a>
+    </section>
+  </main>
+</BaseLayout>
