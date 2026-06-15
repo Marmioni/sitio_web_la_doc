@@ -481,6 +481,14 @@ p {
   padding: 0.8rem;
 }
 
+.media-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 2px solid var(--ink);
+}
+
 .media-card p,
 .work-card p {
   margin: 1rem 0 0.4rem;

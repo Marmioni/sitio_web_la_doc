@@ -13,6 +13,9 @@
         "url": {
           "type": "string"
         },
+        "image": {
+          "type": "string"
+        },
         "$schema": {
           "type": "string"
         }
@@ -20,7 +23,8 @@
       "required": [
         "title",
         "outlet",
-        "url"
+        "url",
+        "image"
       ],
       "additionalProperties": false
     }

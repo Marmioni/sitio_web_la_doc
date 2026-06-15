@@ -17,6 +17,7 @@ const media = defineCollection({
     title: z.string(),
     outlet: z.string(),
     url: z.string(),
+    image: z.string(),
   }),
 });
 
