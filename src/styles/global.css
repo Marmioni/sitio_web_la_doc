@@ -618,6 +618,70 @@ p {
   font-weight: 950;
 }
 
+.contact-panel {
+  width: min(100%, 46rem);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 4.5rem) 1rem clamp(4rem, 8vw, 6rem);
+}
+
+.instagram-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--ink);
+  background: var(--yellow);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.instagram-card:hover {
+  transform: translate(-0.18rem, -0.18rem);
+  box-shadow: 0.32rem 0.32rem 0 var(--ink);
+}
+
+.instagram-icon {
+  display: grid;
+  flex: 0 0 3rem;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+}
+
+.instagram-icon svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.instagram-card strong,
+.instagram-card small {
+  display: block;
+}
+
+.instagram-card strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 5vw, 2.4rem);
+  font-weight: 950;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.instagram-card small {
+  margin-top: 0.25rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.contact-panel > p:last-child {
+  margin-top: 1rem;
+}
+
 .site-footer {
   width: min(100%, var(--max));
   margin: 0 auto;

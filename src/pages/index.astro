@@ -5,19 +5,13 @@ import FragmentQuote from "@components/FragmentQuote.astro";
 import PlaceholderBox from "@components/PlaceholderBox.astro";
 import SectionHeader from "@components/SectionHeader.astro";
 import WorkCard from "@components/WorkCard.astro";
+import { socialLinks } from "../data/socialLinks";
 
 const works = await getCollection("books");
 const media = await getCollection("media");
 const books = works.filter((work) => work.data.kind === "Book");
 const stories = works.filter((work) => work.data.kind === "Short Story");
 
-// REDES SOCIALES: cambia aqui las URL reales de cada perfil.
-const socialLinks = [
-  { label: "Instagram", url: "https://www.instagram.com/mar.mioni?igsh=aDRjYndsYTY4bjIw" },
-  { label: "YouTube", url: "https://youtube.com/@marthamioni4288?si=qtd1j1BylQmggVsY" },
-  { label: "Substack", url: "https://substack.com/@marmioni?utm_source=share&utm_medium=android&r=5lxmvs" },
-  { label: "Amazon", url: "https://amazon.com/author/yourname" }
-];
 ---
 
 <BaseLayout title="MAR MIONI | Creadora independiente">
