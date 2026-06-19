@@ -328,20 +328,23 @@ p {
 
 .social-strip {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
   width: min(100%, var(--max));
   margin: 0 auto;
-  padding: 0 1rem 3rem;
+  padding: 0 1rem 2rem;
 }
 
 .social-strip a {
   display: grid;
-  min-height: 4rem;
+  min-height: 2.5rem;
   align-items: center;
-  padding: 1rem;
+  justify-items: center;
+  padding: 0.65rem 0.45rem;
   border: 2px solid var(--ink);
-  border-right-width: 0;
   background: var(--paper);
+  font-size: 0.68rem;
+  text-align: center;
 }
 
 .social-strip a:nth-child(even),
@@ -350,7 +353,7 @@ p {
 }
 
 .social-strip a:last-child {
-  grid-column: 1 / -1;
+  grid-column: auto;
 }
 
 .fragment {
@@ -874,6 +877,7 @@ p {
 
   .social-strip {
     grid-template-columns: repeat(5, 1fr);
+    gap: 0;
     padding-inline: 1.25rem;
   }
 
@@ -882,6 +886,14 @@ p {
   .social-strip a:last-child {
     grid-column: auto;
     border-right-width: 0;
+  }
+
+  .social-strip a {
+    min-height: 4rem;
+    justify-items: stretch;
+    padding: 1rem;
+    font-size: 0.78rem;
+    text-align: left;
   }
 
   .social-strip a:last-child {
