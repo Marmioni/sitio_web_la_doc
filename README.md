@@ -55,6 +55,39 @@ To use a real photo:
 
 Then add styling for `.author-photo` in `src/styles/global.css` if needed.
 
+### Adding or replacing any `.author-photo` image (author photo, book cover, podcast cover)
+
+Every image using the `.author-photo` class (`src/styles/global.css`) is forced into a
+**4:5 (width:height) box** with `object-fit: cover`. `cover` fills the box by cropping
+whatever doesn't fit — it does not letterbox or resize the design.
+
+This means: if the image you upload is **not already 4:5**, part of it will be
+invisibly cropped on the live site, even though it looks fine in a normal image viewer.
+
+**What happened with `portada_libro.jpg` (2026-08):** the real book cover for *La Corte
+de las Diablas* is a standard 2:3 portrait (1024x1536, ratio 0.667), narrower/taller than
+the site's 4:5 box (ratio 0.8). The browser cropped the top and bottom margins to fill
+the box, cutting into the black background around the title and author name and making
+the cover feel zoomed-in compared to the original file.
+
+**Fix used:** since the cover's background is solid black, we padded the image with
+black bars on the left/right (pillarboxing) until it matched 4:5 exactly, instead of
+cropping or changing the CSS. This shows the full artwork with no visible seam, because
+the padding color matches the image's own background.
+
+**Checklist for the next image you add here:**
+
+1. Check the image's ratio: `width / height`. Target is `4 / 5 = 0.8`.
+2. If it's already close to `0.8`, you can use it as-is.
+3. If it's narrower/taller than `0.8` (e.g. a typical book cover) and has a solid-color
+   background, pad it left/right with that same solid color until `width / height = 0.8`.
+   If it's wider/shorter than `0.8`, pad it top/bottom instead.
+4. If the background is **not** a solid color (e.g. a busy photo), padding will leave a
+   visible bar — in that case crop it to 4:5 around the important subject instead, or ask
+   for the CSS `aspect-ratio` to be changed if the crop can't avoid losing key content.
+5. Keep the same filename when swapping an existing image, so no other file needs to
+   change.
+
 ### Social links
 
 Homepage social links are in `src/pages/index.astro`:
