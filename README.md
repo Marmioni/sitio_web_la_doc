@@ -182,6 +182,24 @@ src/pages/bibliografia.astro
 
 It currently uses a polished placeholder component. Replace `PlaceholderPage` with real sections when ready.
 
+## Site configuration (domain, language)
+
+Two values that were left at their template defaults and never customized (fixed 2026-08-20):
+
+- **`astro.config.mjs` → `site`**: was `https://example.com`. Astro uses this value to build the
+  `canonical` link and `og:url`/`twitter` meta tags on every page (`src/layouts/BaseLayout.astro`).
+  With the wrong domain, every page's canonical URL and social-share link pointed at
+  `example.com` instead of `marmioni.com` — search engines and link previews (Twitter/Facebook/etc.)
+  would have picked up the wrong URL. Now set to `https://marmioni.com`.
+- **`src/layouts/BaseLayout.astro` → `<html lang="...">`**: was `"en"`, but all site content is in
+  Spanish. This tells browsers, screen readers, and search engines the wrong language for the page
+  (wrong pronunciation in screen readers, wrong language targeting in search results). Now `"es"`.
+
+Neither of these caused a build failure — they were syntactically valid values, just factually
+wrong ones, so `astro build` succeeded with them and shipped incorrect metadata silently. If a
+similar template default needs customizing later, check `BaseLayout.astro` for hardcoded English
+placeholder text (e.g. the fallback `description` prop) the same way.
+
 ## Design notes
 
 - No horror imagery is used.
